@@ -12,6 +12,7 @@ class Program
 		Cat jiji = new Cat("black");
 		
 		Cat coki = new Cat("white");
+		coki.Meow();
 		
 		Cat tompel = new Cat("grey");
 	}
