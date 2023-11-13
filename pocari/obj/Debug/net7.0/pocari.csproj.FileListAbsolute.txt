@@ -1,0 +1,15 @@
+C:\Users\Batch 7\Documents\bootcamp\pocari\bin\Debug\net7.0\pocari.exe
+C:\Users\Batch 7\Documents\bootcamp\pocari\bin\Debug\net7.0\pocari.deps.json
+C:\Users\Batch 7\Documents\bootcamp\pocari\bin\Debug\net7.0\pocari.runtimeconfig.json
+C:\Users\Batch 7\Documents\bootcamp\pocari\bin\Debug\net7.0\pocari.dll
+C:\Users\Batch 7\Documents\bootcamp\pocari\bin\Debug\net7.0\pocari.pdb
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.csproj.AssemblyReference.cache
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.AssemblyInfoInputs.cache
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.AssemblyInfo.cs
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.csproj.CoreCompileInputs.cache
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.dll
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\refint\pocari.dll
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.pdb
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\pocari.genruntimeconfig.cache
+C:\Users\Batch 7\Documents\bootcamp\pocari\obj\Debug\net7.0\ref\pocari.dll
