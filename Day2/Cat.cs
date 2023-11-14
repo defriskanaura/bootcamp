@@ -3,15 +3,23 @@ namespace Animal;
 public class Cat //Blueprint
 {
 	//Variable / Field
-	public string colour;
+	public string name;
 	public int age;
 	public bool isMale;
 	public float weight;
 
 	//Constructor
-	public Cat(string colour) 
+	public Cat(string name, int age, bool isMale) 
 	{
-		this.colour = colour;
+		this.name = name;
+		this.age = age;
+		this.isMale = isMale;
+	}
+	public Cat() 
+	{
+		name = "kuceng";
+		age = 0;
+		isMale = false;
 	}
 		
 	//Method / Function
