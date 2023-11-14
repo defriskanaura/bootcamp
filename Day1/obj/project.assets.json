@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Batch 7\\Documents\\bootcamp\\pocari\\pocari.csproj",
-      "projectName": "pocari",
-      "projectPath": "C:\\Users\\Batch 7\\Documents\\bootcamp\\pocari\\pocari.csproj",
+      "projectUniqueName": "C:\\Users\\Batch 7\\Documents\\bootcamp\\Day1\\Day1.csproj",
+      "projectName": "Day1",
+      "projectPath": "C:\\Users\\Batch 7\\Documents\\bootcamp\\Day1\\Day1.csproj",
       "packagesPath": "C:\\Users\\Batch 7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Batch 7\\Documents\\bootcamp\\pocari\\obj\\",
+      "outputPath": "C:\\Users\\Batch 7\\Documents\\bootcamp\\Day1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Batch 7\\AppData\\Roaming\\NuGet\\NuGet.Config"

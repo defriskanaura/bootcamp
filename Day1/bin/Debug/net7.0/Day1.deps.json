@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "pocari/1.0.0": {
+      "Day1/1.0.0": {
         "runtime": {
-          "pocari.dll": {}
+          "Day1.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "pocari/1.0.0": {
+    "Day1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
