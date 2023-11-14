@@ -4,6 +4,7 @@ class Program
 	static void Main() 
 	{
 		Cat pokari = new Cat("yellow");
-		pokari.Eat();
+		string food = "whiskas";
+		pokari.Eat(food);
 	}
 }

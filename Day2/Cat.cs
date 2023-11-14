@@ -15,9 +15,9 @@ public class Cat //Blueprint
 	}
 		
 	//Method / Function
-	public void Eat() 
+	public void Eat(string makanan) 
 	{
-		Console.WriteLine("Eat");
+		Console.WriteLine($"Eat {makanan}");
 	}
 	public void Sleep() 
 	{
