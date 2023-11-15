@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15Nov", "15Nov", "{978A716A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_NestedLogic", "15Nov\A_NestedLogic\A_NestedLogic.csproj", "{7574DBA0-C650-4835-A8B8-B876D0A2370B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_ContainString", "15Nov\B_ContainString\B_ContainString.csproj", "{5B85FF8B-19EE-4B4F-A372-8094454403A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{7574DBA0-C650-4835-A8B8-B876D0A2370B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7574DBA0-C650-4835-A8B8-B876D0A2370B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7574DBA0-C650-4835-A8B8-B876D0A2370B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B85FF8B-19EE-4B4F-A372-8094454403A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B85FF8B-19EE-4B4F-A372-8094454403A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B85FF8B-19EE-4B4F-A372-8094454403A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B85FF8B-19EE-4B4F-A372-8094454403A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7574DBA0-C650-4835-A8B8-B876D0A2370B} = {978A716A-F87A-47D2-BD1F-972703F3A0F9}
+		{5B85FF8B-19EE-4B4F-A372-8094454403A3} = {978A716A-F87A-47D2-BD1F-972703F3A0F9}
 	EndGlobalSection
 EndGlobal
