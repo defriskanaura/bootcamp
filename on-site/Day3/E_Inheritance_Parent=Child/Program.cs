@@ -4,15 +4,14 @@ class Program {
 		Child c = new Child(1,2,3,4);
 		Parent p = c;
 		
-		//Parent p1 = new Child(1,2,3,4);
-
-		//p.a.Dump(); ?
-		//p.b.Dump(); ?
+		Parent p1 = new Child(1,2,3,4);
+		p.a.Dump();
+		p.b.Dump(); 
 		//p.c.Dump(); ?
 		//p.d.Dump(); ?
 		
-		//Parent p1 = new Parent(1,2);
-		//Child c1 = p1; ?
+		// Parent p1 = new Parent(1,2);
+		// Child c1 = p1; 
 	}
 }
 class Jokowi {}
