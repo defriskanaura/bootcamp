@@ -22,3 +22,10 @@ class Human : Parent, IPermintaanOrtu, IPermintaanIstri
 		"UGM".Dump();
 	}
 }
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}

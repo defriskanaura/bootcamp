@@ -17,3 +17,10 @@ class C : B
 		throw new NotImplementedException();
 	}
 }
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}
