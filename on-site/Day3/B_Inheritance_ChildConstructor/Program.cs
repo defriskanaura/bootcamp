@@ -26,8 +26,9 @@ class Animal
 }
 class Cat : Animal
 {
-	public Cat(string colour, int age)
+	public Cat(string colour, int age) //constructor
 	{
+		//constructor 
 		"Cat Created".Dump();
 		this.colour = colour;
 		this.age = age;
