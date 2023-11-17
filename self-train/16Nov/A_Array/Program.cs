@@ -18,7 +18,7 @@ fraudulentOrderIDs[0] = "F000";
 Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
 Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");
 
-usage of foreach array
+//usage of foreach array
 int[] inventory = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 foreach (int items in inventory)
 {
