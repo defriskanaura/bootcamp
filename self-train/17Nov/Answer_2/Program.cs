@@ -10,9 +10,9 @@ class FooBar
 {
 	int n;
 	int[] array;
-	public FooBar(int nX) 
+	public FooBar(int n) 
 	{
-		nX = n;
+		this.n = n;
 	}
 	public void Replace() 
 	{
