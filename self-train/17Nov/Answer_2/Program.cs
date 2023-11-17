@@ -1,35 +1,12 @@
-﻿class Program 
-{
-	static void Main() 
-	{
-		FooBar foobar = new FooBar(15);
-		foobar.Replace();
+﻿
+class Program {
+	static void Main(){
+		string? userInput;
+		do{
+			userInput = Console.ReadLine();
+		} while (userInput == null || userInput.Length == 0 );
+		var myArray = new string[userInput!.Length];
+		Console.WriteLine(myArray.Length);
 	}
 }
-class FooBar 
-{
-	int n;
-	int[] array;
-	public FooBar(int n) 
-	{
-		this.n = n;
-	}
-	public void Replace() 
-	{
-		for (int i = 1; i <= n; i++)
-		{
-			array[i] = i;
-		}
-		foreach (int items in array)
-		{
-			if (items % 3 == 0 || items % 5 == 0)
-			{
-				Console.Write("Foo ");
-			}
-			else 
-			{
-				Console.Write($"{items} ");
-			}
-		}
-	}
-}
+
