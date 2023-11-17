@@ -9,4 +9,22 @@ class Program {
 		Console.WriteLine(myArray.Length);
 	}
 }
-
+// class Program 
+// {
+// 	static void Main() 
+// 	{
+// 		WordPlay foobar = new WordPlay(15, "foo");
+// 	}
+// }
+// class WordPlay 
+// {
+// 	public readonly int n = 6;
+// 	public readonly string word;
+	
+// 	//constructor
+// 	public WordPlay(int n, string word) 
+// 	{
+// 		this.n = n;
+// 		this.word = word;
+// 	}
+// }
