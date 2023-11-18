@@ -8,7 +8,7 @@
 }
 class WordPlay 
 {
-	private string stringAngka = GetAngka();
+	private string _stringAngka = GetAngka();
 	//method
 	private static string GetAngka()
 	{
@@ -17,7 +17,7 @@ class WordPlay
 	}
 	public void Play()
 	{
-		var n = int.Parse(stringAngka);
+		var n = int.Parse(_stringAngka);
 		Console.WriteLine(n);
 		int[] arrayWord = new int[n+1];
 		for (int i = 0; i < n+1; i++)
