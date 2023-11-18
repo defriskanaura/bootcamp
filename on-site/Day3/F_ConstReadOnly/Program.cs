@@ -10,20 +10,7 @@ class Program {
 }
 class Calculator {
 	public const float phi = 3.14f;
-	public readonly int g;
-	public Calculator(int x) {
-		g = x;
-	}
-}
-
-//This is Extension Method
-public static class IniExtension
-{
-	public static void Dump(this object x) 
-	{
-		Console.WriteLine(x.ToString());
-	}
-}	public readonly int g;
+	public readonly int g = 1;
 	public Calculator(int x) {
 		g = x;
 	}
