@@ -16,7 +16,7 @@ class Car
 	public void EngineRun() {
 		int x = 3;
 		EngineTest();
-		EngineUp(7);
+		EngineUp(x);
 	}
 	private void EngineTest()
 	{ // private

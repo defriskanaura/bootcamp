@@ -2,7 +2,7 @@ namespace CarComponent;
 
 public class Door
 {
-	public string colour;/workspaces/bootcamp/on-site/Day3/F_ConstReadOnly
+	public string colour;
 	public int quantity;
 	public int size;
 	public Door(string colour, int quantity, int size) 
