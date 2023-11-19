@@ -8,6 +8,7 @@ class Program {
 		
 		Rumah rumah = rb;
 		rumah.BukaPintu();
+		rb.BukaGarasi();
 	}
 }
 abstract class Rumah
@@ -16,7 +17,7 @@ abstract class Rumah
 	public void BukaJendela() {
 		"Buka jendela".Dump();
 	}
-	public virtual void BukaGarasi() {
+	public void BukaGarasi() {
 		"Keatas".Dump();
 	}
 	public abstract void BukaPintu();
