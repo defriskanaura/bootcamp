@@ -40,6 +40,15 @@ class Bird : Animal
 }
 class Ant : Animal {}
 
+//This is Extension Method
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}
+
 
 
 

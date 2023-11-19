@@ -1,6 +1,6 @@
 namespace Animal;
 
-public class Dog
+class Dog
 {
 	public string colour;
 	public int age;
@@ -9,7 +9,7 @@ public class Dog
 	
 	public void Eat() 
 	{
-		Console.WriteLine("Cat eat");
+		Console.WriteLine("Dog eat");
 	}
 	public void Sleep() 
 	{
@@ -17,6 +17,6 @@ public class Dog
 	}
 	public void Meow() 
 	{
-		Console.WriteLine("Meow");
+		Console.WriteLine("Bark");
 	}
 }

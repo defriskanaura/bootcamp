@@ -6,6 +6,9 @@ class Program {
 		
 		Car car = new Car(ee);
 		car.EngineRun();
+		
+		Car car1 = new Car(he);
+		car1.EngineRun();
 	}
 }
 class Car {
@@ -27,8 +30,16 @@ class ElectricEngine : Engine {
 		"EE Starting".Dump();
 	}
 }
-class HydroEngine {
-	public void Start() {
+class HydroEngine : Engine {
+	public override void Start() {
 		"Hydro Engine Starting".Dump();
+	}
+}
+
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
 	}
 }

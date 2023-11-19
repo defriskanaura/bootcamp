@@ -4,7 +4,7 @@ class Program
 {
 	static void Main()
 	{
-		Cat cat = new Cat();
+		Cat cat = new Cat("yellow", 3);
 
 		cat.colour.Dump();
 		cat.age.Dump();
@@ -13,8 +13,8 @@ class Program
 
 class Animal
 {
-	public string colour = "black";
-	public int age = 5;
+	public string colour;
+	public int age;
 	public Animal(string colour, int age) //Constructor
 	{
 		this.colour = colour;
@@ -29,7 +29,7 @@ class Animal
 }
 class Cat : Animal
 {
-	public Cat(string colour, int age)
+	public Cat(string colour, int age) 
 	{
 		this.colour = colour;
 		this.age = age;

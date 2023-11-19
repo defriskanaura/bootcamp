@@ -1,4 +1,13 @@
 ﻿//Overloading
+class Program 
+{
+	static void Main() 
+	{
+		Calculator calculator = new();
+		int result = calculator.Add(10,10);
+		Console.WriteLine(result);
+	}
+}
 class Calculator {
 	public int Add(int a, int b) {
 		return a + b;

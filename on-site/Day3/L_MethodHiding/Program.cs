@@ -9,7 +9,9 @@ class Program
 		Cat cat = new Cat();
 		cat.MakeSound();
 		
-		animal = cat;
+		Bird bird = new Bird();
+		
+		animal = bird;
 		animal.MakeSound();
 	}
 }
@@ -36,12 +38,19 @@ class Dog : Animal
 }
 class Bird : Animal
 {
-	public void MakeSound()
+	public new void MakeSound()
 	{
 		"Chip...".Dump();
 	}
 }
 class Ant : Animal { }
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}
 
 
 
