@@ -1,5 +1,6 @@
 ﻿//cara declare array 1
 string[] fraudulentOrderIDse = new string[3];
+string[] coba;
 
 fraudulentOrderIDse[0] = "A123";
 fraudulentOrderIDse[1] = "B456";

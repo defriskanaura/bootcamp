@@ -16,6 +16,8 @@ class Program
 			new Jail()
 		};
 		GameController game = new GameController(tiles);
+		Console.WriteLine ("Hey");
+		game.CallTileAction(2);
 	}
 }
 
@@ -34,7 +36,7 @@ class GameController
 	public GameController()
 	{
 		tiles = new Tile[]{
-			//new City(),
+			new City(),
 			new Company(),
 			new Jail()
 		};
@@ -85,6 +87,11 @@ class City : Tile
 	{
 		_price = price;
 	}
+	
+	public City()
+	{
+		
+	}
 	public int GetPrice()
 	{
 		return _price;
@@ -92,6 +99,7 @@ class City : Tile
 	public void Build() 
 	{
 		//Buy
+		Console.WriteLine($"Buy {name}");
 	}
 }
 class Company : Tile {

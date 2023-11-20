@@ -16,5 +16,6 @@ class Program
 		string result = car.EngineBrandCheck();
 		Console.WriteLine(result);
 		Console.WriteLine(car.engine.brand);
+		car.engine.EngineTest();
 	}
 }
