@@ -43,3 +43,12 @@ class Program {
 		game.TotalPlayer.Dump();
 	}
 }
+
+
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}

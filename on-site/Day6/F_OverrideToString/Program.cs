@@ -1,12 +1,14 @@
-﻿//Override ToString from class Object
-void Main()
+﻿//Override ToString from class Objedct
+class Program 
 {
-	Car a = new Car("Toyota");
-	Console.WriteLine(a);
-	string result = a.ToString();
-	Console.WriteLine(result);
+	static void Main()
+	{
+		Car a = new Car("Toyota");
+		Console.WriteLine(a);
+		string result = a.ToString();
+		Console.WriteLine(result);
+	}
 }
-
 class Car {
 	private string brand;
 	public Car(string brand) {

@@ -12,3 +12,11 @@ class Program
 class MathLib {
 	public const int phi = 314;
 }
+
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}

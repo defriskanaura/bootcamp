@@ -21,3 +21,11 @@ static class Calculator {
 		return a * b;
 	}
 }
+
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
+}
