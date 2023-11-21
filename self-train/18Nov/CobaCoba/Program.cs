@@ -78,169 +78,171 @@
 // 		Console.WriteLine("nama = {0}", name);
 // 	}
 // }
+object a = true;
+string result = a as string;
 
-using System;
+// using System;
 
-namespace DoFactory.GangOfFour.Abstract.RealWorld
-{
-    /// <summary>
-    /// MainApp startup class for Real-World
-    /// Abstract Factory Design Pattern.
-    /// </summary>
+// namespace DoFactory.GangOfFour.Abstract.RealWorld
+// {
+//     /// <summary>
+//     /// MainApp startup class for Real-World
+//     /// Abstract Factory Design Pattern.
+//     /// </summary>
 
-    class MainApp
-    {
-        /// <summary>
-        /// Entry point into console application.
-        /// </summary>
+//     class MainApp
+//     {
+//         /// <summary>
+//         /// Entry point into console application.
+//         /// </summary>
 
-        public static void Main()
-        {
-            // Create and run the African animal world
+//         public static void Main()
+//         {
+//             // Create and run the African animal world
 
-            ContinentFactory africa = new AfricaFactory();
-            AnimalWorld world = new AnimalWorld(africa);
-            world.RunFoodChain();
+//             ContinentFactory africa = new AfricaFactory();
+//             AnimalWorld world = new AnimalWorld(africa);
+//             world.RunFoodChain();
 
-            // Create and run the American animal world
+//             // Create and run the American animal world
 
-            ContinentFactory america = new AmericaFactory();
-            world = new AnimalWorld(america);
-            world.RunFoodChain();
+//             ContinentFactory america = new AmericaFactory();
+//             world = new AnimalWorld(america);
+//             world.RunFoodChain();
 
-            // Wait for user input
+//             // Wait for user input
 
-            Console.ReadKey();
-        }
-    }
+//             Console.ReadKey();
+//         }
+//     }
 
 
-    /// <summary>
-    /// The 'AbstractFactory' abstract class
-    /// </summary>
+//     /// <summary>
+//     /// The 'AbstractFactory' abstract class
+//     /// </summary>
 
-    abstract class ContinentFactory
-    {
-        public abstract Herbivore CreateHerbivore();
-        public abstract Carnivore CreateCarnivore();
-    }
+//     abstract class ContinentFactory
+//     {
+//         public abstract Herbivore CreateHerbivore();
+//         public abstract Carnivore CreateCarnivore();
+//     }
 
-    /// <summary>
-    /// The 'ConcreteFactory1' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ConcreteFactory1' class
+//     /// </summary>
 
-    class AfricaFactory : ContinentFactory
-    {
-        public override Herbivore CreateHerbivore()
-        {
-            return new Wildebeest();
-        }
-        public override Carnivore CreateCarnivore()
-        {
-            return new Lion();
-        }
-    }
+//     class AfricaFactory : ContinentFactory
+//     {
+//         public override Herbivore CreateHerbivore()
+//         {
+//             return new Wildebeest();
+//         }
+//         public override Carnivore CreateCarnivore()
+//         {
+//             return new Lion();
+//         }
+//     }
 
-    /// <summary>
-    /// The 'ConcreteFactory2' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ConcreteFactory2' class
+//     /// </summary>
 
-    class AmericaFactory : ContinentFactory
-    {
-        public override Herbivore CreateHerbivore()
-        {
-            return new Bison();
-        }
-        public override Carnivore CreateCarnivore()
-        {
-            return new Wolf();
-        }
-    }
+//     class AmericaFactory : ContinentFactory
+//     {
+//         public override Herbivore CreateHerbivore()
+//         {
+//             return new Bison();
+//         }
+//         public override Carnivore CreateCarnivore()
+//         {
+//             return new Wolf();
+//         }
+//     }
 
-    /// <summary>
-    /// The 'AbstractProductA' abstract class
-    /// </summary>
+//     /// <summary>
+//     /// The 'AbstractProductA' abstract class
+//     /// </summary>
 
-    abstract class Herbivore
-    {
-    }
+//     abstract class Herbivore
+//     {
+//     }
 
-    /// <summary>
-    /// The 'AbstractProductB' abstract class
-    /// </summary>
+//     /// <summary>
+//     /// The 'AbstractProductB' abstract class
+//     /// </summary>
 
-    abstract class Carnivore
-    {
-        public abstract void Eat(Herbivore h);
-    }
+//     abstract class Carnivore
+//     {
+//         public abstract void Eat(Herbivore h);
+//     }
 
-    /// <summary>
-    /// The 'ProductA1' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ProductA1' class
+//     /// </summary>
 
-    class Wildebeest : Herbivore
-    {
-    }
+//     class Wildebeest : Herbivore
+//     {
+//     }
 
-    /// <summary>
-    /// The 'ProductB1' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ProductB1' class
+//     /// </summary>
 
-    class Lion : Carnivore
-    {
-        public override void Eat(Herbivore h)
-        {
-            // Eat Wildebeest
+//     class Lion : Carnivore
+//     {
+//         public override void Eat(Herbivore h)
+//         {
+//             // Eat Wildebeest
 
-            Console.WriteLine(this.GetType().Name +
-              " eats " + h.GetType().Name);
-        }
-    }
+//             Console.WriteLine(this.GetType().Name +
+//               " eats " + h.GetType().Name);
+//         }
+//     }
 
-    /// <summary>
-    /// The 'ProductA2' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ProductA2' class
+//     /// </summary>
 
-    class Bison : Herbivore
-    {
-    }
+//     class Bison : Herbivore
+//     {
+//     }
 
-    /// <summary>
-    /// The 'ProductB2' class
-    /// </summary>
+//     /// <summary>
+//     /// The 'ProductB2' class
+//     /// </summary>
 
-    class Wolf : Carnivore
-    {
-        public override void Eat(Herbivore h)
-        {
-            // Eat Bison
+//     class Wolf : Carnivore
+//     {
+//         public override void Eat(Herbivore h)
+//         {
+//             // Eat Bison
 
-            Console.WriteLine(this.GetType().Name +
-              " eats " + h.GetType().Name);
-        }
-    }
+//             Console.WriteLine(this.GetType().Name +
+//               " eats " + h.GetType().Name);
+//         }
+//     }
 
-    /// <summary>
-    /// The 'Client' class 
-    /// </summary>
+//     /// <summary>
+//     /// The 'Client' class 
+//     /// </summary>
 
-    class AnimalWorld
-    {
-        private Herbivore _herbivore;
-        private Carnivore _carnivore;
+//     class AnimalWorld
+//     {
+//         private Herbivore _herbivore;
+//         private Carnivore _carnivore;
 
-        // Constructor
+//         // Constructor
 
-        public AnimalWorld(ContinentFactory factory)
-        {
-            _carnivore = factory.CreateCarnivore();
-            _herbivore = factory.CreateHerbivore();
-        }
+//         public AnimalWorld(ContinentFactory factory)
+//         {
+//             _carnivore = factory.CreateCarnivore();
+//             _herbivore = factory.CreateHerbivore();
+//         }
 
-        public void RunFoodChain()
-        {
-            _carnivore.Eat(_herbivore);
-        }
-    }
-}
+//         public void RunFoodChain()
+//         {
+//             _carnivore.Eat(_herbivore);
+//         }
+//     }
+// }
 

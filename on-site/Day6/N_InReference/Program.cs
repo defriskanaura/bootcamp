@@ -10,8 +10,8 @@ class Program
 	}
 	static void ChangeBrand(in Car x)
 	{
-		//x.brand = "honda"; locked by its memory
-		//x = new Car("honda"); locked by its memory
+		//x.brand = "honda"; //locked by its memory
+		//x = new Car("honda"); //locked by its memory
 		x.myArray[0] = 3;
 	}
 }

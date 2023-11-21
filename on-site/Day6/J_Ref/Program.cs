@@ -7,9 +7,9 @@ class Program
 	{
 		int a = 3;
 		AddTwo(ref a);
-		Console.WriteLine(a); // ? 3 , 5
+		Console.WriteLine(a); // 5
 	}
-	static void AddTwo(ref int x)
+	static void AddTwo(ref int x) //ref = rujukan
 	{
 		x = x + 2;
 	}

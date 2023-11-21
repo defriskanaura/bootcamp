@@ -1,0 +1,9 @@
+21 November 2023
+Question
+1. cek comment on-site\Day6\I_ReferenceType
+2. cek comment on-site\Day6\K_Out
+3. which one is more effective : public readonly field, private field with public readonly accesor (property), or private field with public method get that return the private field value
+4. cek comment on-site\Day7\A_Generic
+5. "IPerson person = mew CommunityMember();" IPerson is interface, does that mean we can build field and instance from an interface class?
+    x we cannot build interface/abstract 
+6. Kenapa kok ada abstract buat override? Emang kelas lain gak bisa di-override?

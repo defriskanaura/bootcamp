@@ -8,9 +8,9 @@ void Main()
 	Car.count.Dump();
 }
 class Car {
-	public static int count = 0;
+	public static int count = 0; 
 	public Car() {
-		count ++;
+		count ++; //menghitung ada berapa instance yang dibuat dari kelas ini
 	}
 	
 }
