@@ -17,7 +17,7 @@ class Program
 		};
 		GameController game = new GameController(tiles);
 		Console.WriteLine ("Hey");
-		game.CallTileAction(2);
+		game.CallTileAction(4);
 	}
 }
 
@@ -35,16 +35,19 @@ class GameController
 	// ! (Warning) It will make the Tiles configuration fixed
 	public GameController()
 	{
-		tiles = new Tile[]{
-			new City(),
-			new Company(),
-			new Jail()
+		tiles = new Tile[]
+		{
+				new City(),
+				new Company(),
+				new Jail()
 		};
 	}
 	public void CallTileAction(int index) {
 		TileType type = tiles[index].type;
 		if(type == TileType.City) 
 		{
+			// Console.WriteLine (type);
+			// Console.WriteLine (index);
 			((City)tiles[index]).Build();
 		}
 		if (type == TileType.Company)

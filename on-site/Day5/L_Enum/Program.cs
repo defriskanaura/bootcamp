@@ -9,6 +9,9 @@ static void Main() {
 	int x = 4;
 	MonthOfYear result = (MonthOfYear) x;
 	result.Dump();
+	
+	int result2 = (int)MonthOfYear.January;
+	result2.Dump();
 }
 public enum MonthOfYear
 {
@@ -24,4 +27,11 @@ public enum MonthOfYear
 	October = 10,
 	November = 11,
 	Desember = 12
+}
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
 }

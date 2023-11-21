@@ -1,5 +1,5 @@
 ﻿//Enum
-void Main() {
+static void Main() {
 	int result = (int)MonthOfYear.January;
 	result.Dump();
 	
@@ -21,4 +21,11 @@ public enum MonthOfYear
 	October,
 	November,
 	Desember
+}
+public static class IniExtension
+{
+	public static void Dump(this object x) 
+	{
+		Console.WriteLine(x.ToString());
+	}
 }
