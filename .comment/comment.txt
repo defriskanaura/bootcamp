@@ -7,3 +7,6 @@ Question
 5. "IPerson person = mew CommunityMember();" IPerson is interface, does that mean we can build field and instance from an interface class?
     x we cannot build interface/abstract 
 6. Kenapa kok ada abstract buat override? Emang kelas lain gak bisa di-override?
+
+Generic contoh (baru belajar part 1 sama part 2)
+https://drive.google.com/drive/folders/1mFzFJYD3cPmEfLuFVXaOxF0PljkTTKx7?usp=sharing
