@@ -18,7 +18,7 @@ class Program
 		Card card2 = new Card(12,3, 4);
 		game.AddCard(player1, card, card2);
 		
-		
+		GameController game2 = new(player1, player2, card, card2);		
 		
 	}
 }
