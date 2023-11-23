@@ -32,7 +32,7 @@ public class GameController
 		{
 			_deckCards.Add(i);
 		}
-		Console.WriteLine(cards.Length);
+		//Console.WriteLine(cards.Length);
 	}
 	public bool AddCard(IPlayer player, params ICard[] cards) 
 	{

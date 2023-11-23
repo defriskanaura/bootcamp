@@ -78,8 +78,8 @@
 // 		Console.WriteLine("nama = {0}", name);
 // 	}
 // }
-object a = true;
-string result = a as string;
+// object a = true;
+// string result = a as string;
 
 // using System;
 

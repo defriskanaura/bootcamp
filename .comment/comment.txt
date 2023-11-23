@@ -22,7 +22,7 @@ weapon
 
 -> tiap karakter punya weapon lebih dari satu
 -> weapon tidak boleh jenisnya sama
-# kita bikin variable karakter yang berisi dictionary isinya karakter
+# kita bikin variable karakter yang berisi koleksi isinya karakter
 yang berada di game dengan list banyaknya weapon yang ia miliki
 # kita bikin list weapon apa saja yang karakter kita miliki
 
