@@ -25,3 +25,28 @@ weapon
 # kita bikin variable karakter yang berisi dictionary isinya karakter
 yang berada di game dengan list banyaknya weapon yang ia miliki
 # kita bikin list weapon apa saja yang karakter kita miliki
+
+Texas holdem poker
+
+Player
+• 2-4 players
+
+Field : ID, Name
+Class: IPlayer, player
+
+Card
+• On Board (5) 
+• On Player (2) 
+
+Field : Suit, Value, Colour
+Class : ICard, Card, CardStatus
+
+Chip
+• On Board
+• On Player
+
+Field : Amount
+Class : IChip, Chip, ChipStatus
+
+Dictionary player & their set of cards
+
