@@ -9,7 +9,7 @@ class Program
 		Player player3 = new();
 		Player player4 = new();
 		Player player5 = new();
-		GameController game = new GameController(player1, player2, player3, player4, player5);
+		GameController game = new GameController(4, player1, player2, player3, player4, player5);
 	}
 	
 }

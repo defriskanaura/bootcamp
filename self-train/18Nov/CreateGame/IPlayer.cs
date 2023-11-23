@@ -1,6 +1,6 @@
 namespace CreateGame;
 
-public interface IIPlayer
+public interface IPlayer
 {
 		public int Id { get;}
 		public string Name { get; }
