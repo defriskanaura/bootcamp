@@ -2,6 +2,6 @@ namespace FooBar;
 
 public interface IFiller<T>
 {
-	public T originValue {get; set;}
-	public T substituteValue {get; set;}
+	public T Value {get; set;}
+	//public T2 substituteValue {get; set;}
 }

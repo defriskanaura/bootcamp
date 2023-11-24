@@ -1,65 +1,87 @@
 namespace FooBar;
+using System.Text;
+using System.Diagnostics;
 
-public class FoobarController
+public class FoobarController<TOrigin, TSubstitute>
 {
-	// private IFiller<string> _substitute;
-	// private IFiller<int> _origin;
-	private Dictionary<IFiller<string>, IFiller<int>> _wordDictionary;
-	public FoobarController(int x, string y) 
+	private Dictionary<string, string> _wordDictionary;
+	private Dictionary<string, string> _defaultDictionary;
+	private string _key;
+	private string _value;
+	private bool _isUsingDefault;
+	public FoobarController() 
 	{
-		
 		_wordDictionary = new();
-		// _players = new();
-		// _deckCards = new();
-		// _players.Add(player1, new HashSet<ICard>());
-		// _players.Add(player2, new HashSet<ICard>());
+		_isUsingDefault = false;
 	}
+	public FoobarController(bool isUsingDefault) 
+	{
+		_isUsingDefault = isUsingDefault;
+		_defaultDictionary = new Dictionary<string, string>(){
+							{"1", "1"}, {"2", "2"}, {"3", "3"},
+							{"4", "4"}, {"5", "5"}, {"6", "6"},
+							{"7", "7"}, {"8", "8"}, {"9", "9"},
+							{"10", "10"}, {"11", "11"}, {"12", "12"},
+							{"13", "13"}, {"14", "14"}, {"15", "15"}};
+		_wordDictionary = new();
+		if (_isUsingDefault == true) 
+		{
+			_wordDictionary = _defaultDictionary;
+		};
+	}
+	public void ToString(TOrigin x, TSubstitute y, out string _key, out string _value)
+	{
+		_key = x.ToString();
+		_value = y.ToString();
+	}
+	public bool CheckDefault()
+	{
+		if (_isUsingDefault == false) 
+		{
+			return false;
+		}
+		return true;
+	}
+	public bool Add(TOrigin x, TSubstitute y)
+	{
+		ToString(x,y,out _key,out _value);
+		if(_wordDictionary.ContainsKey(_key)){ 
+			return false;
+		}
+		_wordDictionary.Add(_key,_value);
+		foreach (var item in _wordDictionary)
+		{
+			Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
+		}
+		return true;
+	}
+	public StringBuilder Print()
+	{
+		StringBuilder WordShow = new();
+		foreach (var item in _wordDictionary)
+		{
+			WordShow.Append(item.Value);
+		}
+		Console.WriteLine(WordShow);
+		return WordShow;
+	}
+	// public bool Remove(TOrigin x, TSubstitute y)
+	// {
+	// 	if(_wordDictionary.ContainsKey(x)){ 
+	// 		return false;
+	// 	}
+	// 	_wordDictionary.Add(x, y);
+		// foreach (var item in _wordDictionary)
+		// {
+		//     Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
+		// }
+		// return true;
+	// }
 	
-	public void Add(int x, string y)
-	{
-		// Origin<int> origin = new(x);
-		// IFiller<int> origin1 = new(x);
-	}
 }
-/*
-class WordPlay 
-{
-	private string _stringAngka = GetAngka();
-	//method
-	private static string GetAngka()
-	{
-	 Console.WriteLine("Masukkan banyaknya angka: ");
-	 return Console.ReadLine();
-	}
-	public void Play()
-	{
-		var n = int.Parse(_stringAngka);
-		Console.WriteLine(n);
-		int[] arrayWord = new int[n+1];
-		for (int i = 0; i < n+1; i++)
-		{
-			arrayWord[i] = i;
-		}
-		
-		foreach (int items in arrayWord)
-		{
-			if (items % 3 == 0 && !(items % 5 == 0) && !(items==0))
-			{
-				Console.Write("foo ");
-			}
-			else if (items % 5 == 0 && !(items % 3 == 0) && !(items==0))
-			{
-				Console.Write("bar ");
-			}
-			else if (items % 3 == 0 && items % 5 == 0 && !(items==0))
-			{
-				Console.Write("foobar ");
-			}
-			else 
-			{
-				Console.Write($"{items} ");
-			}
-		}
-	}
-}
-*/
+	// public void Add(int x, string y)
+	// {
+	// 	// Origin<int> origin = new(x);
+	// 	// IFiller<int> origin1 = new(x);
+	// }
+

@@ -3,6 +3,10 @@ class Program
 {
 	static void Main() 
 	{
-		Filler<string, int> origin = new(1, "1");
+		FoobarController<int, string> origin = new();
+		origin.Add(1, "Hello");
+		origin.Add(1, "Aya");
+		// Origin asli = new(1);
+		// Substitute pengganti = new("Hello");
 	}
 }

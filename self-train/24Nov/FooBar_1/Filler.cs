@@ -1,14 +1,22 @@
 using System.Numerics;
 
 namespace FooBar;
-
-public class Filler<T> : IFiller<T> where T : IComparable<string>
+public class Filler<T>
 {
-	public T originValue {get; set;}
-	public T substituteValue {get; set;}
-	public Filler(T x, T y)
+	public T Value {get; set;}
+	// public string substituteValue {get; set;}
+	public Filler(T x)
 	{
-		originValue = x;
-		substituteValue = y;
+		Value = x;
 	}
 }
+
+// public class Substitute : IFiller<string>
+// {
+// 	public string Value {get; set;}
+// 	// public string substituteValue {get; set;}
+// 	public Substitute(string y)
+// 	{
+// 		Value = y;
+// 	}
+// }
