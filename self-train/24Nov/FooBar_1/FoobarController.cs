@@ -1,4 +1,4 @@
-namespace FooBar;
+//namespace FooBar;
 using System.Text;
 using System.Diagnostics;
 
@@ -34,11 +34,15 @@ public class FoobarController<TOrigin, TSubstitute>
 		_key = x.ToString();
 		_value = y.ToString();
 	}
-	public bool CheckDefault()
+	public bool SeeDefault()
 	{
 		if (_isUsingDefault == false) 
 		{
 			return false;
+		}
+		foreach (var item in _defaultDictionary)
+		{
+			Console.WriteLine($"{item.Key} = {item.Value}");
 		}
 		return true;
 	}
@@ -49,10 +53,6 @@ public class FoobarController<TOrigin, TSubstitute>
 			return false;
 		}
 		_wordDictionary.Add(_key,_value);
-		foreach (var item in _wordDictionary)
-		{
-			Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
-		}
 		return true;
 	}
 	public StringBuilder Print()
@@ -60,11 +60,24 @@ public class FoobarController<TOrigin, TSubstitute>
 		StringBuilder WordShow = new();
 		foreach (var item in _wordDictionary)
 		{
-			WordShow.Append(item.Value);
+			if (item.Value != item.Key) 
+			{
+				WordShow.Append(item.Value);
+			}
+			else 
+			{
+				WordShow.Append(item.Key);
+			}
+			WordShow.Append(" ");
 		}
-		Console.WriteLine(WordShow);
 		return WordShow;
 	}
+}
+	
+		// foreach (var item in _wordDictionary)
+		// {
+		// 	Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
+		// }
 	// public bool Remove(TOrigin x, TSubstitute y)
 	// {
 	// 	if(_wordDictionary.ContainsKey(x)){ 
@@ -77,8 +90,6 @@ public class FoobarController<TOrigin, TSubstitute>
 		// }
 		// return true;
 	// }
-	
-}
 	// public void Add(int x, string y)
 	// {
 	// 	// Origin<int> origin = new(x);
