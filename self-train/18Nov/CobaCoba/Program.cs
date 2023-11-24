@@ -1,4 +1,89 @@
-﻿// using System;
+﻿using static System.Console;
+
+class Person
+{
+	public string Name
+	{
+		get; set;
+	}
+	public Person(string name)
+	{
+		Name = name;
+	}
+}
+
+class Employee : Person
+{
+	public string JobTitle
+	{
+		get; set;
+	}
+
+	public Employee(string name, string jobTitle) : base(name)
+	{
+		JobTitle = jobTitle;
+	}
+}
+
+interface IGroup<out T>
+{
+	IEnumerable<T> GetAll();
+	
+	public void Print()
+	{
+		Console.WriteLine("Test");
+	}
+}
+
+class Group<T> : IGroup<T>
+{
+	private readonly List<T> list = new();
+	public Group(List<T> list)
+	{
+		this.list = list;
+	}
+	public Group()
+	{
+		
+	}
+	public IEnumerable<T> GetAll() => list;
+	
+	public void Print()
+	{
+		Console.WriteLine("Test");
+	}
+}
+
+class Program
+{
+	public static void Display(IGroup<Person> people)
+	{
+		foreach (var person in people.GetAll())
+		{
+			WriteLine(person.Name);
+		}
+	}
+
+	public static void Main(string[] args)
+	{
+		var employees = new List<Employee>()
+		{
+			new Employee("John Doe","C# Developer"),
+			new Employee("Jane Doe","UI/UX Developer")
+		};
+
+		IGroup<Employee> employeeGroup = new Group<Employee>(employees);
+		
+		Display(employeeGroup);
+		employeeGroup.Print();
+		Console.WriteLine(employees[0].JobTitle);
+		
+		
+		Group<string> x = new Group<string>();
+		x.Print();
+	}
+}
+// using System;
 
 // namespace Tutlane
 // {

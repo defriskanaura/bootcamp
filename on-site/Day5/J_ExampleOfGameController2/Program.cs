@@ -17,7 +17,8 @@ class Program
 		};
 		GameController game = new GameController(tiles);
 		Console.WriteLine ("Hey");
-		game.CallTileAction(4);
+		game.CallTileAction(2);
+		Console.WriteLine(tiles[1]);
 	}
 }
 
