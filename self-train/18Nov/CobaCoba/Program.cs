@@ -1,88 +1,146 @@
-﻿using static System.Console;
+﻿using System;
+using System.Linq;
 
-class Person
+using System.Collections.Generic;
+					
+public class Program
 {
-	public string Name
+	public static void Main()
 	{
-		get; set;
-	}
-	public Person(string name)
-	{
-		Name = name;
-	}
-}
-
-class Employee : Person
-{
-	public string JobTitle
-	{
-		get; set;
-	}
-
-	public Employee(string name, string jobTitle) : base(name)
-	{
-		JobTitle = jobTitle;
-	}
-}
-
-interface IGroup<out T>
-{
-	IEnumerable<T> GetAll();
-	
-	public void Print()
-	{
-		Console.WriteLine("Test");
-	}
-}
-
-class Group<T> : IGroup<T>
-{
-	private readonly List<T> list = new();
-	public Group(List<T> list)
-	{
-		this.list = list;
-	}
-	public Group()
-	{
-		
-	}
-	public IEnumerable<T> GetAll() => list;
-	
-	public void Print()
-	{
-		Console.WriteLine("Test");
-	}
-}
-
-class Program
-{
-	public static void Display(IGroup<Person> people)
-	{
-		foreach (var person in people.GetAll())
-		{
-			WriteLine(person.Name);
-		}
-	}
-
-	public static void Main(string[] args)
-	{
-		var employees = new List<Employee>()
-		{
-			new Employee("John Doe","C# Developer"),
-			new Employee("Jane Doe","UI/UX Developer")
+		var cities = new Dictionary<string, string>(){
+			{"UK", "London, Manchester, Birmingham"},
+			{"USA", "Chicago, New York, Washington"},
+			{"India", "Mumbai, New Delhi, Pune"}
 		};
 
-		IGroup<Employee> employeeGroup = new Group<Employee>(employees);
+		Console.WriteLine("Total Elements: {0}", cities.Count);
 		
-		Display(employeeGroup);
-		employeeGroup.Print();
-		Console.WriteLine(employees[0].JobTitle);
+		cities.Remove("UK"); // removes UK 
+		//cities.Remove("France"); //throws run-time exception: KeyNotFoundException
+		cities.Add("yes");
+		for (int i = 0; i < cities.Count; i++)
+{
+    Console.WriteLine("Key: {0}, Value: {1}", 
+                                            cities.ElementAt(i).Key, 
+                                            cities.ElementAt(i).Value);
+}
+
+		cities.Clear(); //deletes all elements
 		
-		
-		Group<string> x = new Group<string>();
-		x.Print();
+		Console.WriteLine("Total Elements after Clear(): {0}", cities.Count);
+
 	}
 }
+// using System;
+
+// class Program
+// {
+//     static void SomeMethod()
+//     {
+//         Console.WriteLine("SomeMethod was called!");
+//     }
+
+//     static void AnotherMethod()
+//     {
+//         Console.WriteLine("AnotherMethod was called!");
+//     }
+
+//     static void Main()
+//     {
+//         bool myBool = true;
+
+//         // Using ternary conditional operator to conditionally call a method
+//         (myBool ? (Action)SomeMethod : AnotherMethod)();
+
+//         // Output will be "SomeMethod was called!"
+//     }
+// }
+
+// using static System.Console;
+
+// class Person
+// {
+// 	public string Name
+// 	{
+// 		get; set;
+// 	}
+// 	public Person(string name)
+// 	{
+// 		Name = name;
+// 	}
+// }
+
+// class Employee : Person
+// {
+// 	public string JobTitle
+// 	{
+// 		get; set;
+// 	}
+
+// 	public Employee(string name, string jobTitle) : base(name)
+// 	{
+// 		JobTitle = jobTitle;
+// 	}
+// }
+
+// interface IGroup<out T>
+// {
+// 	IEnumerable<T> GetAll();
+	
+// 	public void Print()
+// 	{
+// 		Console.WriteLine("Test");
+// 	}
+// }
+
+// class Group<T> : IGroup<T>
+// {
+// 	private readonly List<T> list = new();
+// 	public Group(List<T> list)
+// 	{
+// 		this.list = list;
+// 	}
+// 	public Group()
+// 	{
+		
+// 	}
+// 	public IEnumerable<T> GetAll() => list;
+	
+// 	public void Print()
+// 	{
+// 		Console.WriteLine("Test");
+// 	}
+// }
+
+// class Program
+// {
+// 	public static void Display(IGroup<Person> people)
+// 	{
+// 		foreach (var person in people.GetAll())
+// 		{
+// 			WriteLine(person.Name);
+// 		}
+// 	}
+
+// 	public static void Main(string[] args)
+// 	{
+// 		var employees = new List<Employee>()
+// 		{
+// 			new Employee("John Doe","C# Developer"),
+// 			new Employee("Jane Doe","UI/UX Developer")
+// 		};
+
+// 		IGroup<Employee> employeeGroup = new Group<Employee>(employees);
+		
+// 		Display(employeeGroup);
+// 		employeeGroup.Print();
+// 		Console.WriteLine(employees[0].JobTitle);
+		
+		
+// 		Group<string> x = new Group<string>();
+// 		x.Print();
+// 	}
+// }
 // using System;
 
 // namespace Tutlane
