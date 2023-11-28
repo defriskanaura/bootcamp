@@ -23,6 +23,6 @@ class Program
 		anggora.Eat(food);
 		shortbritish.Eat(food);
 		munchkin.Eat(food);
-		persia.Eat(food);
+		persia.Eat(food);g
 	}
 }

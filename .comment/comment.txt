@@ -1,3 +1,53 @@
+classDiagram
+    %% A will override card (example only)
+    
+    Card *-- CardType : Composition
+    Card <|.. NumberCard : Realization
+    Card <|.. ReverseCard : Realization
+    Card <|.. SkipCard : Realization
+    Card <|.. WildCard : Realization
+    Card <|.. DrawCard : Realization
+
+   class GameController {
+    - Dictionary~Card, int~ _deckCard
+   }
+    class Card {
+        <<Abstract>>
+        +int id
+        +string name
+        +CardType CardType
+        +bool isSpecialAbility
+
+        +SpecialAbility()
+    }
+    class CardType {
+        <<Enumeration>>
+        NumberCard
+        ReverseCard 
+        SkipCard
+        WildCard
+        DrawCard
+    }
+    class ReverseCard{
+        +SpecialAbility()
+    }
+    class SkipCard{
+        +SpecialAbility()
+    }
+    class WildCard{
+        +SpecialAbility()
+    }
+    class DrawCard{
+        +SpecialAbility()
+    }
+    class Hand{
+    }
+    class Deck{
+        +PullDeck(Dictionary~Card, int~, Player[]) card
+        +Draw(Dictionary~Card, int~, player) card
+        +Shuffle(Dictionary~Card, int~) card
+    }
+    
 21 November 2023
 Question
 1. cek comment on-site\Day6\I_ReferenceType

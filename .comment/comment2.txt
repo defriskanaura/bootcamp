@@ -1,0 +1,56 @@
+UnoGame {
+    Field {
+    private GameStatus _gameStatus
+    private IPlayer _playerNow
+    private Dictionary<IPlayer player, HashSet<ICard>> _cardsOnPlayer
+    private HashSet<ICard> _possiblecards
+    private ICard _playedcard
+    private CardsOnDeck _cardsOnDeck;
+    private ICard _cardOnTable
+
+    }
+    constructor isinya bikin Deck yang udah di shuffle, parameter int maxPlayer, Player player 
+
+    Delegate, listener handlernya addplayer (nunggu player lain masuk gameroom)
+
+    Method {
+    public Dictionary<IPlayer, ICard> AddPlayer (Player player) --> kartu deck yang sudah tershuffle ditambahkan ke
+                                                                    kartu player, hapus kartu dari deck
+    public ICard StartGame() --> return _cardOnTable, hapus satu kartu (_cardOnTable) dari deck (_cardsOnDeck)
+    public IPlayer SwitchPlayer(Direction) --> return player yang dapat giliran sekarang (_playerNow)
+    public _possiblecards CheckPossibleCard (_cardsOnPlayer[_playerNow]], _cardOnTable) --> cek kartu apa aja yang bisa dimainin player
+    // public HashSet<ICard> PlayCard(_playedcard) --> hapus kartu di _playedcard dari koleksi kartu player
+
+    }
+}
+
+Enums {
+    GameStatus : StandBy, GameRunning, SkippedAPlayer, 
+    Direction : Clockwise, CounterClockwise
+}
+
+
+IPlayer {
+    public get int id
+    public get string name
+}
+
+ICard {
+    public get int id
+    public get Color Color
+    public get CardType CardType
+    public get set bool isSpecialAbility
+    Method {
+        public virtual bool isSpecialAbility(UnoGame game)
+        public virtual bool isCardMatch(params ICard[] cards) 
+    } 
+
+}
+
+IDeck {
+    public get set HashSet<ICard> CardsOnDeck
+    Method {
+        public bool RemoveCardfromDeck(ICard)
+        public bool AddCardtoDeck (ICard)
+    }
+}

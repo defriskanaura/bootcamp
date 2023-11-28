@@ -6,4 +6,9 @@ public interface ICard
 	public int SideA { get; }
 	public int SideB { get; }
 	public CardStatus cardStatus { get; set; }
+	
+	public virtual bool Hoi()
+	{
+		return true;
+	}
 }
