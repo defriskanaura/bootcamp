@@ -13,6 +13,10 @@ public class Card : ICard
 	{
 		return Id;
 	}
+	public Card()
+	{
+		
+	}
 	public Card(int id, int sideA, int sideB) 
 	{
 		Id = id;

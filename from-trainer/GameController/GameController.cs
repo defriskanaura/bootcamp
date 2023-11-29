@@ -52,5 +52,10 @@ public class GameController
 		card.cardStatus = status;
 		onCardUpdate?.Invoke(card, status);
 	}
+	public ICard Test()
+	{
+		Card carde = new();
+		return carde;
+	}
 }
 
