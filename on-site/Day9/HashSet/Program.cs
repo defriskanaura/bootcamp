@@ -18,8 +18,13 @@
 		mySet2.Add(7);
 		
 		List<int> mySetter = new();
-		HashSet<int> mySet2 = mySte;
-
+		Stack<int> stackObject = new Stack<int>();
+		stackObject.Push(1);
+        stackObject.Push(2);
+        stackObject.Push(3);
+        stackObject.Push(4);
+		Program program = new();
+		Console.WriteLine(program.X(stackObject.Pop()));
 		// mySet.UnionWith(mySet2);
 		// mySet.IntersectWith(mySet2);
 		mySet.ExceptWith(mySet2);
@@ -28,5 +33,9 @@
 		{
 			Console.WriteLine(i);
 		}
+	}
+	public int[] X (params int[] integ)
+	{
+		return integ;
 	}
 }
