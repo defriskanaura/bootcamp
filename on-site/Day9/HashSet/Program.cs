@@ -16,6 +16,9 @@
 		mySet2.Add(5);
 		mySet2.Add(6);
 		mySet2.Add(7);
+		
+		List<int> mySetter = new();
+		HashSet<int> mySet2 = mySte;
 
 		// mySet.UnionWith(mySet2);
 		// mySet.IntersectWith(mySet2);
