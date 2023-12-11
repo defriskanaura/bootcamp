@@ -43,7 +43,7 @@ namespace ThreadPoolApplication
 
 		}
 
-		private static void MethodWithTask()
+		public static void MethodWithTask()
 		{
 			Task[] myAllTask = new Task[10];
 			for (int i = 0; i < 10; i++)
