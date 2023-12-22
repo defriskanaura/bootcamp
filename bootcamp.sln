@@ -405,6 +405,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_FileInformation", "on-sit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPT_ComparisonFilevsStream", "on-site\Day20\OPT_ComparisonFilevsStream\OPT_ComparisonFilevsStream.csproj", "{37841B31-2EEF-4987-B0BA-6CF0DECE8970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSQL", "ProjectSQL\ProjectSQL.csproj", "{8DD7241A-8D22-4CBD-A5DF-8A084384D8FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1138,6 +1140,10 @@ Global
 		{37841B31-2EEF-4987-B0BA-6CF0DECE8970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37841B31-2EEF-4987-B0BA-6CF0DECE8970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37841B31-2EEF-4987-B0BA-6CF0DECE8970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD7241A-8D22-4CBD-A5DF-8A084384D8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD7241A-8D22-4CBD-A5DF-8A084384D8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD7241A-8D22-4CBD-A5DF-8A084384D8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD7241A-8D22-4CBD-A5DF-8A084384D8FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EF8004B1-F444-4AD9-BDF0-98779EE58042} = {B13DD5C6-5DF2-4778-BAEA-FB89E5952594}
